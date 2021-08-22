@@ -4,6 +4,16 @@ Author URL: http://templatestock.co
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+
 <title>Above Free Responsive Template | Template Stock</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,6 +59,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
 	 </div>     
 	</div>
+	<div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+	<button id="btnCrear" type="button" class="btn btn-primary">Completar el perfil</button>
+
 	<div class="content">
 		<div class="about-section" id="about">
 	<div class="container">
@@ -58,8 +71,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<img src="images/pic-9.jpg" alt=""/>
 			</div>
 			<div class="about-text" id="parrafo">
-					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p> 
-					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. . </p>
+					<p></p> 
+					<p></p>
 			</div>
 			<div class="clearfix"></div>
 			</div>
@@ -190,6 +203,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	
 	
+
+    </script>	
+	<div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+		<button id="btnCrear" type="button" class="btn btn-primary">Crear</button>
+		
+	<div id="modalIngreso" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header bg-dark text-white">
+			  <h5 class="modal-title" id="exampleModalLabel">Ingresos</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <form>
+				<div class="mb-3">
+				  <label for="concepto" class="col-form-label">Apellido</label>
+				  <input id="concepto" type="text" class="form-control" autofocus>
+				</div>
+				<div class="mb-3">
+				  <label for="total" class="col-form-label">Pais</label>
+				  <input id="total" type="text" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label for="concepto" class="col-form-label">Ciudad</label>
+					<input id="concepto" type="text" class="form-control" autofocus>
+				  </div>
+				  <div class="mb-3">
+					<label for="total" class="col-form-label">Edad</label>
+					<input id="total" type="number" class="form-control">
+				  </div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edad</button>
+			  <button type="submit" class="btn btn-primary">Guardar</button>
 	
+			</div>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	  crossorigin="anonymous"></script>	  
+	  <script src="/above/index.js"></script>
 </body>
 </html>
