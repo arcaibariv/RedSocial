@@ -7,6 +7,4 @@ module.exports = (app) => {
     
     app.get('/mispublicaciones', ctrlPub.misPublicaciones)
     app.get('/publicacion', () => {})
-
-
 }

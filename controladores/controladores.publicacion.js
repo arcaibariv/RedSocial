@@ -1,4 +1,4 @@
-const { sequelize, Usuario, Publicacion, Follow } = require('../db/conexion')
+const { sequelize, Usuario, Publicacion } = require('../db/conexion')
 const tokenServices = require('../servicios/jwt.services')
 const ctrlUsuario = require('./controladores.usuario')
 

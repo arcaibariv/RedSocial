@@ -10,7 +10,8 @@ const sequelize = new Sequelize(process.env.DB_NOMBRE,process.env.DB_USER,proces
 
 const Usuario = modelos.Usuario(sequelize,Sequelize);
 const Publicacion = modelos.Publicacion(sequelize,Sequelize)
-const Follow = modelos.Follow(sequelize,Sequelize)
+const Validacion = modelos.Validacion(sequelize,Sequelize)
+const Habilidades = modelos.Habilidades(sequelize,Sequelize)
 
 sequelize.sync({ force:false })
     .then( () => {
@@ -21,5 +22,6 @@ module.exports = {
     sequelize,
     Usuario,
     Publicacion,
-    Follow
+    Validacion,
+    Habilidades
 }

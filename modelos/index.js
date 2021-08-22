@@ -1,3 +1,5 @@
+//const { sequelize } = require("../db/conexion");
+
 const modelos = {}
 
 modelos.Usuario = (sequelize, type) =>{// recibe el nombre de la tabla
@@ -11,7 +13,13 @@ modelos.Usuario = (sequelize, type) =>{// recibe el nombre de la tabla
             type: type.STRING,
             default: null
         },
-        password:  type.STRING
+        password: type.STRING,
+        ciudad: type.STRING,
+        pais: type.STRING,
+        habilidades: {
+            type: type.INT,
+            default: 0
+        }
     });
 }
 
@@ -23,11 +31,20 @@ modelos.Publicacion = (sequelize, type) =>{// recibe el nombre de la tabla
     });
 }
 
-modelos.Follow = (sequelize, type) =>{// recibe el nombre de la tabla
-    return sequelize.define('follow',{
+modelos.Validacion = (sequelize, type) =>{// recibe el nombre de la tabla
+    return sequelize.define('validacione',{
+        evaludor: type.STRING,
+        evaluado: type.STRING,
+        habilidad: type.STRING
+    });
+}
+
+modelos.Habilidades = (sequelize,type) => {
+    return sequelize.define('habilidade',{
         usuario: type.STRING,
-        followed: type.STRING
-    }); 
+        habilidad: type.STRING,
+        porcentaje: type.INT
+    });
 }
 
 module.exports = modelos
