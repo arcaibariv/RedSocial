@@ -4,16 +4,16 @@ const app = express();
 require('dotenv').config();
 const conexion = require('./db/conexion')
 const cors = require('cors');
+const multer = require('multer')
 //const { corsOption } = require('./middlewares/cors.midlewares');
 
-const rutas = require('./rutas/index')
+const rutas = require('./rutas/index');
+const path = require('path');
 //const rutasPresupuesto = require('./routes/presupuestos.routes.js')
 
 app.use(cors())
 app.options('*', cors())
-
-
-
+app.use(multer({dest: path.join(__dirname, './public/upload/temp')}).single('image'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended : true }))
