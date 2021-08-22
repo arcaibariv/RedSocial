@@ -23,7 +23,7 @@ ctrl.misPublicaciones = async (req,res) => {
         console.log(pubs)
         res.status(200).json(pubs)
     } catch (error) {
-        res.status(500).json({message: 'No fue pisible conectar con la base de datos.'})
+        res.status(500).json({message: 'No fue posible conectar con la base de datos.'})
     }
 }
 module.exports = ctrl

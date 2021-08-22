@@ -41,7 +41,6 @@ ctrl.login = async (req,res) => {
             const iguales= bcrypt.compareSync(req.body.password, usuario.password);
             if (iguales) {
                 const token = await tokenServices.generarToken(usuario)
-                console.log(token)
             res.status(200).json(token)
             }
         }
