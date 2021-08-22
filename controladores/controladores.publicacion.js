@@ -16,9 +16,9 @@ ctrl.crearPublicacion = async (req,res) => {
 ctrl.misPublicaciones = async (req,res) => {
     try {
         const pubs = await Publicacion.findAll({
-            where: {
+            /*where: {
                 usuario: req.body.nickname
-            }
+            }*/
         })
         console.log(pubs)
         res.status(200).json(pubs)
