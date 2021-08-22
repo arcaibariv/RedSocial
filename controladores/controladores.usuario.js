@@ -38,9 +38,10 @@ ctrl.login = async (req,res) => {
             }
         })
         if (usuario){
-            const iguales= bcrypt.compareSync(req.body.password, user.password);
+            const iguales= bcrypt.compareSync(req.body.password, usuario.password);
             if (iguales) {
-                const token = await tokenServices.generarToken(usuario[0])
+                const token = await tokenServices.generarToken(usuario)
+                console.log(token)
             res.status(200).json(token)
             }
         }

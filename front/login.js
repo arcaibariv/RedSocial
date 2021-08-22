@@ -1,5 +1,5 @@
 const btnEntrar = document.getElementById('btnEntrar')
-const url='http://localhost:3000/api/usuarios/login'
+const url='http://localhost:3000/login'
 function signIn() {
 
     let user = document.getElementById('userlog').value;
@@ -20,13 +20,16 @@ function signIn() {
         body: JSON.stringify(credenciales)
       });
       const myJson = await res.json(); 
-      console.log(myJson);
+      return myJson
      
       
       
     };
-    userAction();
-
+    const x=userAction();
+    if (x==Error) {
+      alert("Contraseña o usuario incorrectos")
+      
+    }
 
 
 
