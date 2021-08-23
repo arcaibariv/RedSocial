@@ -17,7 +17,7 @@ modelos.Usuario = (sequelize, type) =>{// recibe el nombre de la tabla
         ciudad: type.STRING,
         pais: type.STRING,
         habilidades: {
-            type: type.INT,
+            type: type.INTEGER,
             default: 0
         }
     });
@@ -43,7 +43,7 @@ modelos.Habilidades = (sequelize,type) => {
     return sequelize.define('habilidade',{
         usuario: type.STRING,
         habilidad: type.STRING,
-        porcentaje: type.INT
+        porcentaje: type.INTEGER
     });
 }
 

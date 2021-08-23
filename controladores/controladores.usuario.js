@@ -81,7 +81,7 @@ ctrl.subirImagen = async (req,res) => {
             await Usuario.update({imagen: rutaFinal},
                 {
                     where:{
-                        id=req.body.id
+                       /* id=req.body.id*/
                     }
                 })
             res.status(200).json({message:'Imagen subida con éxito'})
