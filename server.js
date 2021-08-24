@@ -13,7 +13,6 @@ const path = require('path');
 
 app.use(cors())
 app.options('*', cors())
-app.use(multer({dest: path.join(__dirname, './public/upload/temp')}).single('image'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended : true }))
