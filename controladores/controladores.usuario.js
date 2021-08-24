@@ -47,7 +47,7 @@ ctrl.login = async (req,res) => {
             }
         }
         else {
-            res.status(500).json({mesage: 'El usuario o contraseña no son correcto.'})
+            res.status(409).json({mesage: 'El usuario o contraseña no son correcto.'})
         }
     } catch (error) {
         console.log(error)
